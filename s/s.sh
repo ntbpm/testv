@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 
 SS_DIR="/root/ss/"
@@ -9,6 +7,7 @@ downloadSServer(){
 	echo "load from network..."
 
 	curl https://raw.githubusercontent.com/ntbpm/testv/master/s/ss.x.exe -o sserver
+	chmod -R 755 sserver
 	mv sserver $SS_DIR
 }
 
