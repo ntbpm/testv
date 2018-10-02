@@ -6,7 +6,7 @@ downloadSServer(){
 	echo ""
 	echo "load from network..."
 
-	curl https://raw.githubusercontent.com/ntbpm/testv/master/s/ss.exe -o sserver
+	curl https://raw.githubusercontent.com/ntbpm/testv/master/s/ss.x.exe -o sserver
 	chmod -R 755 sserver
 	mv sserver $SS_DIR
 }
