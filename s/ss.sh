@@ -20,6 +20,9 @@ execSServer(){
 	echo "All sserver started"
 }
 
+# 杀死进程
+ps -ef | grep sserver | grep -v grep | awk '{print $2}' | xargs kill -9
+
 # create dir
 if [ ! -d $SS_DIR ];then
 	mkdir $SS_DIR
