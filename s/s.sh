@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 
 SS_DIR="/root/ss/"
@@ -13,9 +15,10 @@ downloadSServer(){
 execSServer(){
 	# 杀死进程
 	ps -ef | grep sserver | grep -v grep | awk '{print $2}' | xargs kill -9
+	echo "to start sserver...."
 	/root/ss/sserver -p 56879 -k iport443 -m rc4-md1357 -u &
 	/root/ss/sserver -p 443 -k iport443 -m rc4-md1357 -u &
-	echo ".... all sserver start ...."
+	echo "All sserver started"
 }
 
 # create dir
