@@ -25,7 +25,7 @@ if [ ! -d $SS_DIR ];then
 	mkdir $SS_DIR
 fi
 
-if [ -f $SS_DIR"sserver" ];then
+if [ ! -f $SS_DIR"sserver" ];then
 	echo "...sserver exsit..."
 	read -n1 -p "Do you want to download new from network [Y/N]?" answer
 	case $answer in
@@ -38,6 +38,7 @@ if [ -f $SS_DIR"sserver" ];then
 	    echo "\nerror choice";;
 	esac
 else 
+	downloadSServer
 	echo "\nload from network..."
 fi
 
