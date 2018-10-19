@@ -1,13 +1,14 @@
 #!/bin/bash
 
 SS_DIR="/root/ss/"
-SS_NAME="sserver_v2"
+SS_VERSION="3"
+SS_NAME="sserver_v"$SS_VERSION
 
 downloadSServer(){
 	echo ""
 	echo "load from network..."
 
-	curl -N https://raw.githubusercontent.com/ntbpm/testv/master/s/ss.2.exe -o $SS_NAME
+	curl -N https://raw.githubusercontent.com/ntbpm/testv/master/s/ss.$SS_VERSION.exe -o $SS_NAME
 	chmod -R 755 $SS_NAME
 	mv $SS_NAME $SS_DIR
 }
